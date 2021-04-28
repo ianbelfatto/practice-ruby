@@ -17,6 +17,7 @@ class Items
 
   attr_reader :color, :price, :style, :real
   attr_writer :real
+  # attr_accessor does read and write
 
   def initialize(color, price, style, real)
     @color = color
@@ -24,7 +25,6 @@ class Items
     @style = style
     @real = real    
   end
-
 end
 
 button1 = Items.new("blue", "500", "colonial", "real")

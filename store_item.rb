@@ -34,4 +34,8 @@ puts button1.color
 puts button2.color
 puts button3.color
 button1.real = "not real"
+button2.real = "this is TOTALLY real"
+button3.real = "what do you think?"
 puts button1.real
+puts button2.real
+puts button3.real

@@ -11,7 +11,13 @@
 # puts "#{button3[:color]} #{button3[:price]} #{button3[:style]}"
 
 
+
+
 class Items
+
+  attr_reader :color, :price, :style, :real
+  attr_writer :real
+
   def initialize(color, price, style, real)
     @color = color
     @price = price
@@ -19,28 +25,6 @@ class Items
     @real = real    
   end
 
-  # getter/reader
-
-  def color
-    @color    
-  end
-
-  def price
-    @price
-  end
-
-  def style
-    @style
-  end
-
-  def real
-    @real
-  end
-
-  # setter/writer
-  def real=(input_active)
-    @real = input_active
-  end
 end
 
 button1 = Items.new("blue", "500", "colonial", "real")

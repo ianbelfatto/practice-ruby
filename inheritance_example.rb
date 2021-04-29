@@ -1,4 +1,5 @@
 class Vehicle
+  attr_accessor :speed, :direction
   def initialize
     @speed = 0
     @direction = 'north'

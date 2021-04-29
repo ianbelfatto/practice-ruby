@@ -18,7 +18,7 @@ class Vehicle
 end
 
 class Car < Vehicle
-
+  attr_accessor :make, :model, :fuel
   def initialize
     super
     @make = 'Toyota'
@@ -29,14 +29,10 @@ class Car < Vehicle
   def honk_horn
     puts "Beeeeeeep!"
   end
-
-  def model
-    @model
-  end
 end
 
 class Bike < Vehicle
-
+attr_accessor :weight, :speeds, :brakes
   def initialize
     super
     @weight = '20lbs'
@@ -47,18 +43,12 @@ class Bike < Vehicle
   def ring_bell
     puts "Ring ring!"
   end
-
-  def weight
-    @weight
-  end
 end
 
 car = Car.new
 car.accelerate
 car.honk_horn
-puts car.model
 
 bike = Bike.new
 bike.accelerate
 bike.ring_bell
-puts bike.weight

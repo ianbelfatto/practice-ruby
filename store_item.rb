@@ -39,3 +39,18 @@ puts button3.color
 puts button1.real
 puts button2.real
 puts button3.real
+
+class Food < Items
+  def initialize(input_options)
+    super
+    @shelf_life = input_options[:shelf_life] || "This food item will self-destruct in 3... 2....."
+  end
+
+  def shelf_life
+    @shelf_life
+  end
+
+  food1 = Food.new(color: "red")
+  puts food1.shelf_life
+  puts food1.color
+end

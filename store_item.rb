@@ -19,23 +19,23 @@ class Items
   attr_writer :real
   # attr_accessor does read and write
 
-  def initialize(color, price, style, real)
-    @color = color
-    @price = price
-    @style = style
-    @real = real    
+  def initialize(input_options)
+    @color = input_options[:color] || "Black"
+    @price = input_options[:price] || "Free!"
+    @style = input_options[:style] || "Basic"
+    @real = input_options[:real] || "Yes"
   end
 end
 
-button1 = Items.new("blue", "500", "colonial", "real")
-button2 = Items.new("red", "200", "mid-century", "real")
-button3 = Items.new("indigo", "1000000", "futuristic", "real")
+button1 = Items.new(color: "blue", price: "500", style: "colonial", real: "real")
+button2 = Items.new(color: "red", price: "200", style: "mid-century", real: "real")
+button3 = Items.new(color: "indigo", price: "1000000", style: "futuristic", real: "real")
 puts button1.color
 puts button2.color
 puts button3.color
-button1.real = "not real"
-button2.real = "this is TOTALLY real"
-button3.real = "what do you think?"
+# button1.real = "not real"
+# button2.real = "this is TOTALLY real"
+# button3.real = "what do you think?"
 puts button1.real
 puts button2.real
 puts button3.real
